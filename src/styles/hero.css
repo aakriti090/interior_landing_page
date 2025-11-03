@@ -1,0 +1,93 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('/images/hero.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* optional dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Animation for text */
+.fade-in-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  opacity: 0;
+  animation: fadeIn 1.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for button */
+.slide-up-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 12px 28px;
+  margin-top: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 0;
+  animation: slideUp 1.2s ease forwards;
+  animation-delay: 1.2s;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.slide-up-btn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .fade-in-text {
+    font-size: 1.8rem;
+  }
+
+  .slide-up-btn {
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,133 @@
+.collections {
+  padding: 50px 60px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.collections h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.collections p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/* grid layout */
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* main card */
+.room-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* room image */
+.room-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: all 0.4s ease;
+}
+
+/* room name visible by default */
+.room-name {
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  padding: 10px 0;
+  font-size: 20px;
+  border-radius: 5px 5px 0 0;
+  z-index: 2;
+}
+
+/* overlay hidden initially */
+.room-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+}
+
+/* room details inside overlay */
+.room-details {
+  color: #fff;
+  max-width: 90%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.room-details p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: justify;
+  line-height: 1.5;
+  color: white;
+}
+
+.room-details button {
+  padding: 10px 22px;
+  border: none;
+  background-color: #9fb995;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 550;
+  transition: all 0.3s ease;
+}
+
+.room-details button:hover {
+  background-color: #485347;
+  transform: scale(1.05);
+}
+
+/* hover effect */
+.room-card:hover .room-img {
+  filter: blur(2px) brightness(0.5);
+  transform: scale(1.05);
+}
+
+.room-card:hover .room-overlay {
+  background: rgba(0,0,0,0.5);
+  opacity: 1;
+}
+
+.room-card:hover .room-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.room-card:hover .room-name {
+  display: none; /* hide name during hover */
+}
+
+/* responsive height */
+@media (max-width: 768px) {
+  .room-img {
+    height: 260px;
+  }
+}
