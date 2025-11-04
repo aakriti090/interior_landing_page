@@ -79,7 +79,7 @@ npm install
 npm run dev
 ```
 
-##Screenshots
+## Screenshots
 
 ### Hero Section
 ![Hero](public/images/s1.png)
