@@ -94,12 +94,8 @@ npm run dev
 ![Collections](public/images/s4.png)
 
 ### Footer
-![Footer](public/images/footer.png)
+![Footer](public/images/s5.png)
 
 ---
 
-##License
-
-This project is licensed under the MIT License.
----
 

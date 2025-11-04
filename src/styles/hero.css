@@ -1,7 +1,9 @@
 .hero {
   position: relative;
   height: 100vh;
-  background: url('/images/hero.png') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +14,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* optional dark overlay */
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,10 +27,10 @@
   padding: 0 20px;
 }
 
-/* Animation for text */
+/* Text animation */
 .fade-in-text {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 100;
   line-height: 1.4;
   opacity: 0;
   animation: fadeIn 1.8s ease forwards;
@@ -45,7 +47,7 @@
   }
 }
 
-/* Animation for button */
+/* Button animation */
 .slide-up-btn {
   background-color: white;
   color: black;
@@ -61,14 +63,12 @@
   transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .slide-up-btn:hover {
   background-color: black;
   color: white;
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
-
 
 @keyframes slideUp {
   from {

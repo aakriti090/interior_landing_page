@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/collections.css';
 
 function Collections() {
+  // Array of room objects, each containing a name, image path, and description
   const rooms = [
     {
       name: 'Kitchen Room',
@@ -30,6 +31,7 @@ function Collections() {
       <h2>Shop By Room</h2>
       <p>Discover furniture and decor for every room in your home, from living rooms to bedrooms, kitchens, and more.</p>
       <div className="room-grid">
+        {/* Loop through each room in the array and display a card */}
         {rooms.map((room, index) => (
           <div key={index} className="room-card">
             <img src={room.img} alt={room.name} className="room-img" />
