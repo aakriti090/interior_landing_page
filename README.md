@@ -8,7 +8,6 @@ A modern and responsive landing page for an Interior Design website. Built with 
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Screenshots](#screenshots)
-- [License](#license)
 
 ## Features
 - **Responsive Design:** Works on desktop, tablet, and mobile.
