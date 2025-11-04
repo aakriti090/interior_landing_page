@@ -26,7 +26,7 @@ A modern and responsive landing page for an Interior Design website. Built with 
 - Images for products, rooms, and icons
 
 ## Project Structure
-
+```bash
 interior-landing-page/
 │
 ├─ public/
@@ -58,7 +58,7 @@ interior-landing-page/
 │ └─ main.jsx
 │
 └─ package.json
-
+```
 
 ## Installation
 1. Clone the repository:
